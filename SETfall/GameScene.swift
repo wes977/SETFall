@@ -9,37 +9,76 @@
 import SpriteKit
 
 class GameScene: SKScene {
-    override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!"
-        myLabel.fontSize = 45
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
+    
+    let playButton = SKSpriteNode(imageNamed:"play")
+    let aboutButton = SKSpriteNode(imageNamed:"about")
+    let instructionButton = SKSpriteNode(imageNamed:"tutoriel")
+    let leaderboardButton = SKSpriteNode(imageNamed:"leaderboard")
+    
+    override func didMove(to view: SKView) {
         
-        self.addChild(myLabel)
+        
+        self.playButton.position = CGPoint(x: self.frame.midX * 0.5,y: self.frame.midY * 1.5)
+        self.addChild(self.playButton)
+        
+        self.aboutButton.position = CGPoint(x: self.frame.midX * 0.5,y: self.frame.midY * 0.5)
+        self.addChild(self.aboutButton)
+        
+        self.instructionButton.position = CGPoint(x: self.frame.midX * 1.5,y: self.frame.midY * 1.5)
+        self.addChild(self.instructionButton)
+        
+        self.leaderboardButton.position = CGPoint(x: self.frame.midX * 1.5,y: self.frame.midY * 0.5)
+        self.addChild(self.leaderboardButton)
+        
+        self.backgroundColor = UIColor(hex: 0x80D9FF)
+        
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-       /* Called when a touch begins */
-        
-        for touch in touches {
-            let location = touch.locationInNode(self)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch : AnyObject in touches {
+            let location = touch.location(in: self)
             
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
+            if self.atPoint(location) == self.playButton{
+                let scene = PlayScene(size: self.size)
+                let skView = self.view! as SKView
+                skView.ignoresSiblingOrder = true
+                scene.scaleMode = .resizeFill
+                scene.size = skView.bounds.size
+                skView.presentScene(scene)
+            }
             
-            sprite.xScale = 0.5
-            sprite.yScale = 0.5
-            sprite.position = location
+            if self.atPoint(location) == self.aboutButton{
+                let scene = AboutScene(size: self.size)
+                let skView = self.view! as SKView
+                skView.ignoresSiblingOrder = true
+                scene.scaleMode = .resizeFill
+                scene.size = skView.bounds.size
+                skView.presentScene(scene)
+                
+            }
+            if self.atPoint(location) == self.instructionButton{
+                let scene = InstructionScene(size: self.size)
+                let skView = self.view! as SKView
+                skView.ignoresSiblingOrder = true
+                scene.scaleMode = .resizeFill
+                scene.size = skView.bounds.size
+                skView.presentScene(scene)
+                
+            }
             
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            sprite.runAction(SKAction.repeatActionForever(action))
-            
-            self.addChild(sprite)
+            if self.atPoint(location) == self.leaderboardButton{
+                let scene = LeaderboardScene(size: self.size)
+                let skView = self.view! as SKView
+                skView.ignoresSiblingOrder = true
+                scene.scaleMode = .resizeFill
+                scene.size = skView.bounds.size
+                skView.presentScene(scene)
+                
+            }
         }
-    }
+           }
    
-    override func update(currentTime: CFTimeInterval) {
+    override func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
     }
 }
