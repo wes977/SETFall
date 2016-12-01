@@ -14,11 +14,11 @@
 //
 
 import SpriteKit
-
+// The about page
 class AboutScene: SKScene {
     
 
-    
+    // all the buttons YEEEEEEEEEEEEE
     let backButton = SKSpriteNode(imageNamed:"back")
     let playButton = SKSpriteNode(imageNamed:"play")
     
@@ -28,7 +28,7 @@ class AboutScene: SKScene {
     let about3Text = SKLabelNode(fontNamed: "Chalkduster")
     
 
-    
+    // the init
     override func didMove(to view: SKView) {
         
         self.backButton.position = CGPoint(x: self.frame.midX * 0.5,y: self.frame.midY * 0.35)
@@ -45,11 +45,11 @@ class AboutScene: SKScene {
         self.about1Text.fontSize = 18
         self.about1Text.position = CGPoint(x: self.frame.midX, y: self.frame.midY * 1.5)
         
-        self.about2Text.text = "Game Dev , UID with Russ"
+        self.about2Text.text = "Jen Klimova"
         self.about2Text.fontSize = 18
         self.about2Text.position = CGPoint(x: self.frame.midX, y: self.frame.midY * 1.25)
         
-        self.about3Text.text = "Mobile with Igor"
+        self.about3Text.text = "G-Dev with Russ"
         self.about3Text.fontSize = 18
         self.about3Text.position = CGPoint(x: self.frame.midX, y: self.frame.midY * 1)
         
@@ -66,7 +66,7 @@ class AboutScene: SKScene {
         self.backgroundColor = UIColor(hex: 0x80D9FF)
         
     }
-    
+    // when you touch the screen
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch : AnyObject in touches {
             let location = touch.location(in: self)
@@ -91,7 +91,7 @@ class AboutScene: SKScene {
             }
         }
     }
-    
+    // the lopp i dont need 
     override func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
     }

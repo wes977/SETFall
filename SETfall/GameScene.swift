@@ -7,14 +7,14 @@
 //
 
 import SpriteKit
-
+// This is the start menu
 class GameScene: SKScene {
     
     let playButton = SKSpriteNode(imageNamed:"play")
     let aboutButton = SKSpriteNode(imageNamed:"about")
     let instructionButton = SKSpriteNode(imageNamed:"tutoriel")
     let leaderboardButton = SKSpriteNode(imageNamed:"leaderboard")
-    
+    // the inti
     override func didMove(to view: SKView) {
         
         
@@ -33,11 +33,11 @@ class GameScene: SKScene {
         self.backgroundColor = UIColor(hex: 0x80D9FF)
         
     }
-    
+    // when you touvh the screen
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch : AnyObject in touches {
             let location = touch.location(in: self)
-            
+            // all the difrent buttons
             if self.atPoint(location) == self.playButton{
                 let scene = PlayScene(size: self.size)
                 let skView = self.view! as SKView
@@ -76,8 +76,8 @@ class GameScene: SKScene {
                 
             }
         }
-           }
-   
+    }
+    
     override func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
     }

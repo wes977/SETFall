@@ -9,7 +9,7 @@
 //
 
 import SpriteKit
-
+// for showing the highscores
 class LeaderboardScene: SKScene {
     
     var viewController: GameViewController!
@@ -29,7 +29,7 @@ class LeaderboardScene: SKScene {
 
     
     var lb = Leaderboard.sharedInstance
-    
+    // the init
     override func didMove(to view: SKView) {
         
 
@@ -81,7 +81,7 @@ class LeaderboardScene: SKScene {
         self.backgroundColor = UIColor(hex: 0x80D9FF)
         
     }
-
+// travering the leaderboard
     func swipedDown(_ sender:UISwipeGestureRecognizer){
         //lb.addScore(69, nName: "Wes Thompson")
         if leaderboardPanel != 0{
@@ -89,7 +89,7 @@ class LeaderboardScene: SKScene {
         }
         
     }
-    
+    // goign up in the leaderboard
     func swipedUp(_ sender:UISwipeGestureRecognizer){
      
         if leaderboardPanel != maxNumPanels{
@@ -98,7 +98,7 @@ class LeaderboardScene: SKScene {
         }
         
     }
-    
+    // when you touch the screen
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch : AnyObject in touches {
@@ -123,7 +123,7 @@ class LeaderboardScene: SKScene {
             }
         }
     }
-    
+    // the loop to update the leaderboard and all that 
     override func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
         let lboard = lb.getLeaderboard()

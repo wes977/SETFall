@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3F795E591DC538FC0042F882 /* BlockStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F795E581DC538FC0042F882 /* BlockStatuses.swift */; };
+		3F795E5D1DC53D230042F882 /* PlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F795E5C1DC53D230042F882 /* PlayScene.swift */; };
+		3F795E5F1DC554070042F882 /* EnemyStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F795E5E1DC554070042F882 /* EnemyStatus.swift */; };
 		3FBE55571DBEEDF40076070C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBE55561DBEEDF40076070C /* AppDelegate.swift */; };
 		3FBE55591DBEEDF40076070C /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE55581DBEEDF40076070C /* GameScene.sks */; };
 		3FBE555B1DBEEDF40076070C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBE555A1DBEEDF40076070C /* GameScene.swift */; };
@@ -17,7 +19,6 @@
 		3FBE55651DBEEDF40076070C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE55631DBEEDF40076070C /* LaunchScreen.storyboard */; };
 		3FBE55701DBEEDF40076070C /* SETfallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBE556F1DBEEDF40076070C /* SETfallTests.swift */; };
 		3FBE557B1DBEF3390076070C /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBE557A1DBEF3390076070C /* UIColorExtension.swift */; };
-		3FBE557D1DBEF71A0076070C /* PlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBE557C1DBEF71A0076070C /* PlayScene.swift */; };
 		3FBE56301DC080D00076070C /* AboutScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBE562F1DC080D00076070C /* AboutScene.swift */; };
 		3FBE56321DC0832C0076070C /* InstructionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBE56311DC0832C0076070C /* InstructionScene.swift */; };
 		3FBE56341DC083430076070C /* LeaderboardScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBE56331DC083430076070C /* LeaderboardScene.swift */; };
@@ -37,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		3F795E581DC538FC0042F882 /* BlockStatuses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockStatuses.swift; sourceTree = "<group>"; };
+		3F795E5C1DC53D230042F882 /* PlayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayScene.swift; sourceTree = "<group>"; };
+		3F795E5E1DC554070042F882 /* EnemyStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyStatus.swift; sourceTree = "<group>"; };
 		3FBE55531DBEEDF40076070C /* SETfall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SETfall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FBE55561DBEEDF40076070C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FBE55581DBEEDF40076070C /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -50,7 +53,6 @@
 		3FBE556F1DBEEDF40076070C /* SETfallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SETfallTests.swift; sourceTree = "<group>"; };
 		3FBE55711DBEEDF40076070C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FBE557A1DBEF3390076070C /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
-		3FBE557C1DBEF71A0076070C /* PlayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayScene.swift; sourceTree = "<group>"; };
 		3FBE562F1DC080D00076070C /* AboutScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutScene.swift; sourceTree = "<group>"; };
 		3FBE56311DC0832C0076070C /* InstructionScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InstructionScene.swift; path = ../InstructionScene.swift; sourceTree = "<group>"; };
 		3FBE56331DC083430076070C /* LeaderboardScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardScene.swift; sourceTree = "<group>"; };
@@ -126,7 +128,7 @@
 				3FBE555A1DBEEDF40076070C /* GameScene.swift */,
 				3FBE56331DC083430076070C /* LeaderboardScene.swift */,
 				3FBE562F1DC080D00076070C /* AboutScene.swift */,
-				3FBE557C1DBEF71A0076070C /* PlayScene.swift */,
+				3F795E5C1DC53D230042F882 /* PlayScene.swift */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -138,6 +140,7 @@
 				3FBE56361DC093740076070C /* Leaderboard.swift */,
 				3FBE56391DC2C2930076070C /* Villian.swift */,
 				3F795E581DC538FC0042F882 /* BlockStatuses.swift */,
+				3F795E5E1DC554070042F882 /* EnemyStatus.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -249,14 +252,15 @@
 			files = (
 				3FBE555B1DBEEDF40076070C /* GameScene.swift in Sources */,
 				3FBE56321DC0832C0076070C /* InstructionScene.swift in Sources */,
+				3F795E5F1DC554070042F882 /* EnemyStatus.swift in Sources */,
 				3FBE56341DC083430076070C /* LeaderboardScene.swift in Sources */,
-				3FBE557D1DBEF71A0076070C /* PlayScene.swift in Sources */,
 				3F795E591DC538FC0042F882 /* BlockStatuses.swift in Sources */,
 				3FBE555D1DBEEDF40076070C /* GameViewController.swift in Sources */,
 				3FBE55571DBEEDF40076070C /* AppDelegate.swift in Sources */,
 				3FBE563A1DC2C2930076070C /* Villian.swift in Sources */,
 				3FBE56301DC080D00076070C /* AboutScene.swift in Sources */,
 				3FBE557B1DBEF3390076070C /* UIColorExtension.swift in Sources */,
+				3F795E5D1DC53D230042F882 /* PlayScene.swift in Sources */,
 				3FBE56371DC093740076070C /* Leaderboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

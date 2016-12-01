@@ -9,7 +9,7 @@
 //
 
 import SpriteKit
-
+// the instruction screen also know as the tutoriel for some reason i just dont know
 class InstructionScene: SKScene {
     
     let backButton = SKSpriteNode(imageNamed:"back")
@@ -23,7 +23,7 @@ class InstructionScene: SKScene {
 
     var instructionPanel = 0
     var maxNumPanels = 2
-    
+    // the inti
     override func didMove(to view: SKView) {
         
         self.backButton.position = CGPoint(x: self.frame.midX * 0.5,y: self.frame.midY * 0.35)
@@ -75,21 +75,21 @@ class InstructionScene: SKScene {
         self.backgroundColor = UIColor(hex: 0x80D9FF)
         
     }
-    
+    //swiped right and all that
     func swipedRight(_ sender:UISwipeGestureRecognizer){
         if instructionPanel != 0{
             instructionPanel -= 1
         }
         
     }
-    
+    //swiped left and all that
     func swipedLeft(_ sender:UISwipeGestureRecognizer){
         if instructionPanel != maxNumPanels{
             instructionPanel += 1
         }
         
     }
-    
+    // started touching it
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch : AnyObject in touches {
             let location = touch.location(in: self)
@@ -114,7 +114,7 @@ class InstructionScene: SKScene {
             }
         }
     }
-    
+    // the loop to update things 
     override func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
         
